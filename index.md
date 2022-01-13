@@ -1,5 +1,3 @@
-Hello world!
-
 # Baguettes 
 ## A versatile bread
 
