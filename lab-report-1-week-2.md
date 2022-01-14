@@ -55,7 +55,7 @@ Here is an example of using this command:
 
 ## **Part 5**: Setting an SSH key
 We're going set an SSH key to avoid having to enter our password everytimg we log in or run **scp**. 
-(We are going to use a program called **ssh-keygen**, which creates a pair of files called *public key* and *private key*. We are going to copy the public key to a particular location on the serve and the private key to a partiuclar location on the client. Then, the **ssh** command uses the pair of files in place of your passowrd. 
+(We are going to use a program called **ssh-keygen**, which creates a pair of files called *public key* and *private key*. We are going to copy the public key to a specific location on the serve and the private key to a specific location on the client. By doing so, the **ssh** command is able to use the pair of files in place of the password.)
 
 To do so type the following in terminal on client (your computer):
 ```
@@ -64,7 +64,7 @@ $ ssh-keygen
 
 This created two new files on your system...
 
-The private key (in a file id_rsa) and the public key (in a file id_rsa.pub), stored in the .ssh directory on your computer.
+The private key (in file id_rsa) and the public key (in file id_rsa.pub), are stored in the .ssh directory on your computer.
 
 > Sidenote: (If using Windows, follow the extra ssh-add steps [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
 
@@ -94,6 +94,7 @@ $ ssh cs15lwi22@ieng6.ucsd.edu "ls"
 ```
 $ ssh cs15lwi22@ieng6.ucsd.edu "WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI"
 ```
+![Image](photos/shortcuts.png)
 
 
 
