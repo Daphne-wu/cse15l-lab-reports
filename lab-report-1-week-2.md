@@ -24,11 +24,9 @@ Now, open a terminal on VSCode and it should look like this:
  $ ssh cs15lwi22zz@ieng6.ucsd.edu
 ```
 The **zz** are replaced by letters in course specific account (ex: mine are axn).
-<br /> 
-<img src="Desktop/remoteconnect.png" width="200" height="140" />
-<br /> 
-INSERT IMAGE
-<br />
+
+![Image](/photos/remoteconnect.png)
+
 YAY! Now your terminal is connected to a computer in the CSE basement. **SO COOL.** The commands you run on your terminal will run on that computer! Your computer is called the client and the computer in the basement is called the server based on your connection.
 
 ## **Part 3**: Trying Some Commands
@@ -42,7 +40,7 @@ Let's start off by trying some simple commands. Use these in your terminal and t
 
  Here is an example of running some commands:
  
-INSERT IMAGE
+![Image](photos/commands.png)
 
 ## **Part 4**: Moving Files with **scp**
 A key part of working remotely is being able to copy files between the computers back and forth. 
@@ -52,7 +50,7 @@ To copy files from your computer to a remote computer, use the command **scp**. 
 Here is an example of using this command:
 (I copied the WhereAmI.java file to the ieng6 server)
 
-INSERT IMAGE
+![Image](photos/movingFiles.png)
 
 ## **Part 5**: Setting an SSH key
 We're going set an SSH key to avoid having to enter our password everytimg we log in or run **scp**. 
@@ -69,7 +67,7 @@ The private key (in a file id_rsa) and the public key (in a file id_rsa.pub), st
 
 > Sidenote: (If using Windows, follow the extra ssh-add steps [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
 
-INSERT IMAGE
+![Image](photos/sshkeys.png)
 
 Now we have to copy the public key to the **.ssh** directory of your user account on the server.
 Do the following:
