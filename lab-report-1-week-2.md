@@ -7,6 +7,7 @@ Go to the [Visual Studio Code website](https://code.visualstudio.com/) and read 
 <br />
 Here is what it should look like after installations (may have different color, menu bar, etc. depending on systems/settings):
 <br />
+
 <!-- ![Image](photos/vsCode.png) -->
 <img src="photos/vsCode.png" width="200" height="140" />
 
@@ -68,18 +69,25 @@ Sidenote: (If using Windows, follow the extra ssh-add steps here: https://docs.m
 INSERT IMAGE
 
 Now we have to copy the public key to the **.ssh** directory of your user account on the server.
-?$ ssh cs15lwi22zz@ieng6.ucsd.edu
+
+
+$ ssh cs15lwi22zz@ieng6.ucsd.edu
+
 Enter Password
-# now on server
+*(now on server)*
 $ mkdir .ssh
+
 $ logout
-# back on client
+
+*(back on client)*
+
 $ scp /Users/joe/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys
-# You use your username and the path you saw in the command above
 
+You use your username and the path you saw in the command above
 
-
-
+<div class="boxBorder">
+asdasd
+</div>
 
 
 
