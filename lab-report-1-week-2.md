@@ -82,10 +82,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
 Now, should be able to ssh or scp from this client to the server without entering your password.
 
-
-INSERT IMAGE
-
-## **Part 7:** Optimizing Remote Running
+## **Part 6:** Optimizing Remote Running
 To optimize remote running, here are some tricks that will help!
 
 * Writing a command in quotations at the end of an ssh command will directly run it on the remote server. For example
