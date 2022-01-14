@@ -13,11 +13,13 @@ Here is what it should look like after installations (may have different color, 
 
 ## **Part 2**: Remotely Connecting
  If you are on a windows computer you must install [OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) in order to remotely connect.
-<br />
-Next, look up your course-specific account for CSE15L here:
-https://sdacs.ucsd.edu/~icc/index.php
-<br /> For example, mine is: *cs15lwi22axn*
-<br /> Now, open a terminal on VSCode and it should look like this:
+
+Next, look up your course-specific account for CSE15L 
+[here](https://sdacs.ucsd.edu/~icc/index.php).
+<br /> 
+For example, mine is: *cs15lwi22axn*
+
+Now, open a terminal on VSCode and it should look like this:
  ```
  $ ssh cs15lwi22zz@ieng6.ucsd.edu
 ```
@@ -36,9 +38,10 @@ Let's start off by trying some simple commands. Use these in your terminal and t
 * **pwd** (this command "prints working directory")
 * **mkdir** (this command makes a new directory of a specified name)
 * **cp** (this command is used to make a copy of a specified file)
-<br />
+
+
  Here is an example of running some commands:
- <br />
+ 
 INSERT IMAGE
 
 ## **Part 4**: Moving Files with **scp**
@@ -64,7 +67,7 @@ This created two new files on your system...
 
 The private key (in a file id_rsa) and the public key (in a file id_rsa.pub), stored in the .ssh directory on your computer.
 
-> Sidenote: (If using Windows, follow the extra ssh-add steps here: https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
+> Sidenote: (If using Windows, follow the extra ssh-add steps [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
 
 INSERT IMAGE
 
