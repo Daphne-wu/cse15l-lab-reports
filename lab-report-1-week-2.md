@@ -1,6 +1,7 @@
 # Lab Report 1 Week 2
 ---
 ## *Tutorial for remote access*
+How to log into a course-specific account on ieng6
 ## **Part 1**: Installing VScode
 
 Go to the [Visual Studio Code website](https://code.visualstudio.com/) and read the instructions to install it onto your computer. *Make sure its the correct version!* 
