@@ -6,7 +6,7 @@
 Go to the [Visual Studio Code website](https://code.visualstudio.com/) and read the instructions to install it onto your computer. *Make sure its the correct version!* 
 <br />
 Here is what it should look like after installations (may have different color, menu bar, etc. depending on systems/settings):
-<br />
+<br /> 
 
 <!-- ![Image](photos/vsCode.png) -->
 <img src="photos/vsCode.png" width="200" height="140" />
