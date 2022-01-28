@@ -10,7 +10,14 @@ Here is a link the test file for a failure-inducing input that prompted me to ma
 
 * Here is the symptom of that failure-inducing input:
 Output of running the file at the command line for the version where it was failing:
-![Image](photos/L2symptom1.png)
+```
+daphnewu@Daphnes-MacBook-Pro markdown-parse % javac MarkdownParse.java        
+daphnewu@Daphnes-MacBook-Pro markdown-parse % java MarkdownParse test-file2.md
+0
+[[link]https://something.com]
+```
+
+<!-- ![Image](photos/L2symptom1.png) -->
 [test-file2.md](https://github.com/Daphne-wu/markdown-parse/blob/main/test-file2.md) does not have a valid link, so no links should have been outputted. Yet, [link]https://something.com] was. 
 * Here is a screenshot of a code change diff from Github in the MarkdownParse.java:
 ![Image](photos/L2change1.png)
@@ -29,7 +36,15 @@ Here is a link the test file for a failure-inducing input that prompted me to ma
 
 * Here is the symptom of that failure-inducing input:
 Output of running the file at the command line for the version where it was failing:
-![Image](photos/L2symptom2.png)
+```
+daphnewu@Daphnes-MacBook-Pro CSE15L-RoseateSpoonbill % javac MarkdownParse.java        
+daphnewu@Daphnes-MacBook-Pro CSE15L-RoseateSpoonbill % java MarkdownParse test-file6.md
+nextCloseBracket: 15
+openParen: 29
+closeParen: 38
+[page.com]
+```
+<!-- ![Image](photos/L2symptom2.png) -->
 [test-file6.md](https://github.com/Daphne-wu/CSE15L-RoseateSpoonbill/blob/main/test-file6.md) does not have a valid link, so no links should have been outputted. Yet, page.com was. 
 * Here is a screenshot of a code change diff from Github in the MarkdownParser.java:
 ![Image](photos/L2change2.png)
@@ -48,7 +63,15 @@ We noticed while testing, that when our parser took in the [test-file10.md](http
 
 * Here is the symptom of that failure-inducing input:
 Output of running the file at the command line for the version where it was failing:
-![Image](photos/L2symptom3.png)
+```
+daphnewu@Daphnes-MacBook-Pro CSE15L-RoseateSpoonbill % javac MarkdownParse.java        
+daphnewu@Daphnes-MacBook-Pro CSE15L-RoseateSpoonbill % java MarkdownParse test-file10.md
+nextCloseBracket: 15
+openParen: 29
+closeParen: 38
+[]
+```
+<!-- ![Image](photos/L2symptom3.png) -->
 [test-file10.md](https://github.com/Daphne-wu/CSE15L-RoseateSpoonbill/blob/main/test-file10.md) has a valid link so it should have been outputted. Yet, only an empty arrayList was outputted.
  * Here is a screenshot of a code change diff from Github in the MarkdownParser.java to fix this bug:
 ![Image](photos/L2change3.png)
