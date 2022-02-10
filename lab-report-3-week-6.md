@@ -1,4 +1,4 @@
-# Lab Report 3 Week 5
+# Lab Report 3 Week 6
 ---
 ## *Streamline ssh Configuration*
 Having to always type out your account name when you log into ieng6 can be a hassle. 
