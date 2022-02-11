@@ -13,7 +13,9 @@ In order to do this, we need to put an entry in our ~/.ssh/config that tells SSH
 
 ### Here is how I went into my .ssh/config file:
 ![Image](photos/ssh.png)
-### Here is how I edited it (I typed "vi config into my terminal to use vim to edit the config file). 
+### Here is how I edited it 
+
+(I typed "vi config into my terminal to use vim to edit the config file). 
 
 *To edit in vim:* Type "i" to insert, and then esc + : + wq, to safe and exit. 
 ![Image](photos/viconfig.png)
