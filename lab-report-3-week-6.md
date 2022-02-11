@@ -32,5 +32,6 @@ and entered my password when promted.
 ### Here is an example of using an scp command to copy a file to my account using the alias.
 ![Image](photos/scpfile.png)
 To make sure that the file was copied, I used the "ls" command to list everything. As you can see, MarkdownParse.java is copied! Yay!
+
 *Prior to doing the scp command, I printed my working directory using "pwd" to see where to copy the file in the server.*
 ![Image](photos/pwd.png)
