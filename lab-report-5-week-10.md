@@ -49,16 +49,15 @@ The markdown-parse implementation code does not check if the parenthesis holding
 ---
 > [<b]
 ```
-This means that on line 871 of the results.txt in the CSE15L-RoseateSpoonbill directory, the line contained `[]`, while on line 211 of the markdown-parse/results.txt directory, the line contained `[<b]`.  If we look at line 871, in those files, that’s the test output for the file 491.md. 
+This means that on line 871 of the results.txt in the CSE15L-RoseateSpoonbill directory, the line contained `[]`, while on line 871 of the markdown-parse/results.txt directory, the line contained `[<b]`.  If we look at line 871, in those files, that’s the test output for the file 491.md. 
  
 
-The contents of `file 194.md` are:
+The contents of `file 491.md` are:
 ```
 [a](<b)c>)
 ```
 I believe markdown-parse's implementation is correct in this case. The expected output from this file is `[<b]`, as there is a valid link in the file. The markdown-parse's implementation outputed `[<b]`, however, my RoseateSpoonbill implementation outputed `[]`.
 
 **The Bug:**
-Again, the markdown-parse implementation code does not check if the parenthesis holding a link is right after the closed bracket. In this case, there is is text between the closed bracket and open parenthesis. This makes it not a valid link. This bug can be fixed by checking for whether the next character after a closed bracket holding the title of the link is right next to the open parenthesis holding the link domain.
+My implementation code has a bug where it looks explicity for a exclaimation point. It incorrected looks for if there is an exclaimaiton point before the first open bracket. If there is no exclaimation point then the link is not added. To fix this bug all I need to do is change the code from looking for an exclaimation point before the the open bracket, to looking for whether there is not an exclaimation point. This would be a simple code change on line 37 of my code from a `!=` to a `==`. 
 
-[a](<b)c>)
