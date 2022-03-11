@@ -19,6 +19,7 @@ This outputs the differences between the two files to a file called `diff.txt`.
 ## Describe which implementation is correct:
 
 **Test 1:**
+------
 ```
 211c211
 < []
@@ -28,8 +29,36 @@ This outputs the differences between the two files to a file called `diff.txt`.
 This means that on line 211 of the results.txt in the CSE15L-RoseateSpoonbill directory, the line contained `[]`, while on line 211 of the markdown-parse/results.txt directory, the line contained `[url]`.  If we look at line 211, in those files, that’s the test output for the file 194.md. 
  
 
- > 
-
+The contents of `file 194.md` are:
+```
 [Foo*bar\]]:my_(url) 'title (with parens)'
 
 [Foo*bar\]]
+```
+I believe my or RoseateSpoonbill's implementation is correct in this case. The expected output from this file is `[]`, as there are no valid links in the file. The RoseateSpoonbill's implementation outputed `[]`, however, the markdown-parse implementation outputed `[url].
+
+**The Bug:**
+The markdown-parse implementation code does not check if the parenthesis holding a link is right after the closed bracket. In this case, there is is text between the closed bracket and open parenthesis. This makes it not a valid link. This bug can be fixed by checking for whether the next character after a closed bracket holding the title of the link is right next to the open parenthesis holding the link domain. 
+
+
+**Test 2:**
+------
+```
+871c871
+< []
+---
+> [<b]
+```
+This means that on line 871 of the results.txt in the CSE15L-RoseateSpoonbill directory, the line contained `[]`, while on line 211 of the markdown-parse/results.txt directory, the line contained `[<b]`.  If we look at line 871, in those files, that’s the test output for the file 491.md. 
+ 
+
+The contents of `file 194.md` are:
+```
+[a](<b)c>)
+```
+I believe markdown-parse's implementation is correct in this case. The expected output from this file is `[<b]`, as there is a valid link in the file. The markdown-parse's implementation outputed `[<b]`, however, my RoseateSpoonbill implementation outputed `[]`.
+
+**The Bug:**
+Again, the markdown-parse implementation code does not check if the parenthesis holding a link is right after the closed bracket. In this case, there is is text between the closed bracket and open parenthesis. This makes it not a valid link. This bug can be fixed by checking for whether the next character after a closed bracket holding the title of the link is right next to the open parenthesis holding the link domain.
+
+[a](<b)c>)
