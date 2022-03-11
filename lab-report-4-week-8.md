@@ -79,7 +79,7 @@ To test snippit 2, I added the following test to MarkdownParseTest of reviewed c
 ```
 
 Then, I used the command "make test" to run the test on the code. The test did not pass. Here is the specific part of the JUnit output that shows the test failure:
-![Image](photos/reviews2.png)
+![Image](photos/previews22.png)
 
 Question 2: I think there is a middle sized code change that can make the program work for snippit 2 for nested parentheses, brackets, and escaped brackets. We can use a stack to check whether the brackets and parenthesis properly close (i.e. have matching pairs). If they do properly close, we can make it a valid link. If they don't, then we shouldn't treat it as a link. We would also need to check whether the links have the proper order. We can add an if condition statement to check whether the indicies of the parethesis holding the link are greater than or less than the backticks to determine whether the link is valid.
 
@@ -128,7 +128,7 @@ To test snippit 2, I added the following test to MarkdownParseTest of reviewed c
 ```
 
 Then, I used the command "make test" to run the test on the code. The test did not pass. Here is the specific part of the JUnit output that shows the test failure:
-![Image](photos/reviews3.png)
+![Image](photos/reviews33.png)
 
 Question 3: I think there is a small change to make the code work for snippit 3. We can first check for whether the "link" has properly closed brackets and parenthesis. If it does, then we should see where the string for the link ends and where there is a newline. If new lines or line breaks exist inside the brackets, then the link should not be valid and the code should break. Otherwise, links should be valid even if is a new line inside the parenthesis. Additional checks must be made to ensure that there are not too many new lines, as it would make the link invalid.
 
